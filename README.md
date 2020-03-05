@@ -23,5 +23,8 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 # install vue-resource (for http requests)
 npm install vue-resource --save
 
+# install vue-router (to set up routes)
+npm install vue-router --save
+
 ## Used JsonPlaceholder for fake json data
 ## https://jsonplaceholder.typicode.com/
