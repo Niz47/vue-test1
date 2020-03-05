@@ -55,16 +55,25 @@ export default {
     }
   },
   methods: {
+    //   store data in firebase realtime database
     post: function(){
-        this.$http.post('https://jsonplaceholder.typicode.com/posts', {
-            title: this.blog.title,
-            body: this.blog.content,
-            userId: 1
-        }).then(function(data){
+        this.$http.post('https://vue-test1-8c174.firebaseio.com/posts.json', this.blog).then(function(data){
             console.log(data);
             this.submitted=true;
         });
-    }
+    },
+
+    // use jsonplaceholder - fake resource
+    // post: function(){
+    //     this.$http.post('https://jsonplaceholder.typicode.com/posts', {
+    //         title: this.blog.title,
+    //         body: this.blog.content,
+    //         userId: 1
+    //     }).then(function(data){
+    //         console.log(data);
+    //         this.submitted=true;
+    //     });
+    // }
   },
 }
 </script>
